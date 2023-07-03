@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -25,13 +25,42 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png"
                         alt="" width="100" height="24" class="d-inline-block img-fluid align-top">
                 </a>
-                <button class="btn btn-success" type="submit">Create a new post</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success button-style" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
 
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Caption:
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here"
+                                        id="floatingTextarea"></textarea>
+                                    <label for="floatingTextarea">Add the caption of yoour post here</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="dropdown">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-regular fa-gear fa-xs"></i>
+                            <i class="fa-solid fa-gear"></i>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -47,10 +76,10 @@
                 </div>
             </div>
         </nav>
-        <div class="container border border-danger border-5">
-            <div class="row border border-primary border-3">
-                <div class="col-6 d-flex justify-content-start">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <div class="container border border-5 p-0">
+            <div class="row border">
+                <div>
+                    <ul class="nav nav-tabs cuadricula-estilo" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
                                 type="button" role="tab" aria-controls="home" aria-selected="true"><i
@@ -64,25 +93,127 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            Foto-cuadricula</div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Foto
-                            individual</div>
+                            <div class="row m-3">
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/aislado-feliz-sonriente-perro-fondo-blanco-retrato-4_1562-693.jpg?w=740&t=st=1688246274~exp=1688246874~hmac=ca28f2e227ae8482ff2c7c3b237f40647f845468b8041c1a5b121f10ba7eef3a">
+
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/diversos-amigos-estudiantes-disparan_53876-47012.jpg?w=740&t=st=1688246410~exp=1688247010~hmac=6da65e2a373037bcff78794b280ca07a2906daa02430938755ff2899c19fa96d">
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/hermosa_1203-2633.jpg?w=740&t=st=1688246591~exp=1688247191~hmac=48b24226eeafd755d80744ef4cd6aaeea5c0a2c614183e02ed31b7bcef2f016f">
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class=" col-4 d-flex justify-content-start ">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/tiro-cintura-arriba-feliz-despreocupada-atractiva-chica-pelo-rizado-brazos-tatuados-sonrisa-blanca-dientes-pecho-manos-cruzadas-mirando-camara-entusiasta-pared-blanca-pie_176420-37620.jpg?w=740&t=st=1688246716~exp=1688247316~hmac=e3ce8c13e0d0447d58509837700637b84eec9c704fdebaff728d2a456932881b">
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start ">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/famosa-torre-eiffel-paris-hermosos-colores_268835-830.jpg?w=740&t=st=1688246781~exp=1688247381~hmac=045a2d153d01322e43858dbbabb83faf1cea6a8c5cf4a7af0aa9229367233a52">
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start ">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/jugadores-futbol-accion-estadio-profesional_654080-1748.jpg?w=740&t=st=1688246885~exp=1688247485~hmac=7e2a9e99de473f85d7300e98d9d180486a13e8870736d0a3f8e9b24c3120832b">
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/vista-frontal-familia-sonriente-afuera_23-2149661362.jpg?w=740&t=st=1688249123~exp=1688249723~hmac=ec66b82326ac10c7da089913dbe36f1218527e5a2e79d726e3c0498c4fb42c3b">
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://as2.ftcdn.net/v2/jpg/02/34/49/79/1000_F_234497946_U5SC2sfy8DfqebsGAD16bkdE52n2g3n1.jpg">
+                                </div>
+                                <div class=" col-4 d-flex justify-content-start">
+                                    <img class="foto"
+                                        src="https://img.freepik.com/foto-gratis/estudiante-compartiendo-sus-conocimientos-sus-colegas_329181-8498.jpg?w=740&t=st=1688249190~exp=1688249790~hmac=b166f0c9f0377473e3fcd0edcd81fea6c48f42513d77ca2307db049c47327b30">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row border-3 pb-1">
+                                <div class="box">
+                                    <div class="header">
+                                        <h2> My Crazy dog Spark!</h2>
+                                        <p class="date d-flex flex-row-reverse bd-highlight">08/26</p>
+                                    </div>
+                                    <div></div>
+                                </div>
+                                <div class="box-image border border-primary">
+                                    <img class="foto img-fluid"
+                                        src="https://img.freepik.com/foto-gratis/aislado-feliz-sonriente-perro-fondo-blanco-retrato-4_1562-693.jpg?w=740&t=st=1688246274~exp=1688246874~hmac=ca28f2e227ae8482ff2c7c3b237f40647f845468b8041c1a5b121f10ba7eef3a">
+                                </div>
+                                <div class="box 2">
+                                    <div class="reactions">
+                                        <p><b>204 Likes</b></p>
+                                    </div>
+                                    <div class="description border-bottom pb-3">This is an example of a very good photo
+                                        that you can post on instagram </div>
+                                </div>
+
+                                <div class="row border-3">
+                                    <div class="box">
+                                        <div class="header">
+                                            <h2> The greatness of Croatia</h2>
+                                            <p class="date d-flex flex-row-reverse bd-highlight">04/09</p>
+                                        </div>
+                                    </div>
+                                    <div class="box-image border border-primary px-0 ">
+                                        <img class="foto img-fluid"
+                                            src="https://img.freepik.com/foto-gratis/hermosa_1203-2633.jpg?w=740&t=st=1688246591~exp=1688247191~hmac=48b24226eeafd755d80744ef4cd6aaeea5c0a2c614183e02ed31b7bcef2f016f">
+                                    </div>
+                                    <div class="box 2">
+                                        <div class="reactions">
+                                            <p><b>26985 Likes</b></p>
+                                        </div>
+                                        <div class="description border-bottom pb-3"> This is an example of a very good
+                                            photo that you can post on instagram </div>
+                                    </div>
+
+                                    <div class="row border-3">
+                                        <div class="box">
+                                            <div class="header">
+                                                <h2> Amazing GOAL by Cristiano!</h2>
+                                                <p class="date d-flex flex-row-reverse bd-highlight ">06/10</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-image border border-primary px-0">
+                                            <img class="foto"
+                                                src="https://img.freepik.com/foto-gratis/jugadores-futbol-accion-estadio-profesional_654080-1748.jpg?w=826&t=st=1688313165~exp=1688313765~hmac=11bc329d425b1c5c5d0aefffd67db119320d9d5564dc4459a057ec0962788aa8">
+                                        </div>
+                                        <div class="box 2">
+                                            <div class="reactions">
+                                                <p><b>204 Likes</b></p>
+                                            </div>
+                                            <div class="description border-bottom pb-3">This is an example of a very
+                                                good photo that you can post on instagram </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
 
                     </div>
                 </div>
-            </div>
 
-            <div class="row border border-primary border-3"> Foto1 </div>
-            <div class="row border border-primary border-3"> Foto2 </div>
-            <div class="row border border-primary border-3"> Foto3 </div>
-        </div>
-
-
-
-
-
-
-    </div>
 
 </body>
 
