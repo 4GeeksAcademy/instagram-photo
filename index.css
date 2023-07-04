@@ -1,9 +1,18 @@
 .foto{
-    width: 100%;  
+    width: 100%; 
+    height: 100%; 
 }
 .button-style{
-    margin-left: 750px !important;
+    margin-left: 800px !important;
 }
 .cuadricula-estilo{
     padding-left: 45% !important;
 }
+.header{
+    display:flex;
+    justify-content: space-between;
+    padding: 5px;
+    height: 65px;
+    align-items: center;
+
+    }
